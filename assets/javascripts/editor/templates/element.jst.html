@@ -1,0 +1,25 @@
+<div class="jst-template" name="Element">
+    <div class="item" name="markup">
+        <g class="rotatable"><g class="scalable"></g></g>
+    </div>
+    <div class="item" name="tools">
+        <g class="uml-<%= type %>-tools element-tools" transform="translate(<%= box.x %>, <%= box.y %>)">
+            <%= rect_border %>
+            <%= remove_icon %>
+        </g>
+    </div>
+</div>
+
+<div class="jst-template" name="Start">
+    <div class="item" name="markup">
+        <g class="rotatable"><g class="scalable"><circle/></g><text/></g>
+    </div>
+</div>
+
+<div class="jst-template" name="End">
+    <div class="item" name="markup">
+        <g class="rotatable"><g class="scalable"><circle class="outer"/><circle class="inner"/></g></g>
+    </div>
+</div>
+
+

@@ -1,0 +1,140 @@
+<% content_for :header_tags do %>
+    <script src="plugin_assets/modeling/javascripts/lib/jquery.js"></script>
+    <script src="plugin_assets/modeling/javascripts/lib/jquery.sortElements.js"></script>
+    <script src="plugin_assets/modeling/javascripts/lib/lodash.js"></script>
+    <script src="plugin_assets/modeling/javascripts/lib/backbone.js"></script>
+    <script src="plugin_assets/modeling/javascripts/lib/backbone-nested.min.js"></script>
+    <script src="plugin_assets/modeling/javascripts/lib/Backbone.Undo.js"></script>
+    <script src="plugin_assets/modeling/javascripts/lib/backbone.routefilter.js"></script>
+
+    <script src="plugin_assets/modeling/javascripts/src/core.js"></script>
+    <script src="plugin_assets/modeling/javascripts/src/vectorizer.js"></script>
+    <script src="plugin_assets/modeling/javascripts/src/geometry.js"></script>
+
+
+    <script src="plugin_assets/modeling/javascripts/src/joint.dia.graph.js"></script>
+
+    <script src="plugin_assets/modeling/javascripts/src/joint.dia.cell.js"></script>
+    <script src="plugin_assets/modeling/javascripts/src/joint.dia.element.js"></script>
+
+    <script src="plugin_assets/modeling/javascripts/src/joint.dia.link.js"></script>
+    <script src="plugin_assets/modeling/javascripts/src/joint.dia.paper.js"></script>
+
+    <script src="plugin_assets/modeling/javascripts/editor/routes/dia.AppRoutes.js"></script>
+
+    <script src="plugin_assets/modeling/javascripts/editor/dia.js"></script>
+
+
+    <script src="plugin_assets/modeling/javascripts/editor/views/dia.ElementView.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/dia.LinkView.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/dia.ToolbarView.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/class/uml.ClassView.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/class/uml.ClassDiagramToolbarView.js"></script>
+
+    <script src="plugin_assets/modeling/javascripts/editor/views/usecase/uml.UsecaseDiagramToolbarView.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/sequence/uml.SequenceDiagramToolbarView.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/activity/uml.ActivityDiagramToolbarView.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/directedgraph/general.DirectedGraphDiagramToolbarView.js"></script>
+
+
+
+    <script src="plugin_assets/modeling/javascripts/editor/views/state/uml.StateView.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/state/uml.StateMachineDiagramToolbarView.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/state/uml.StateLinkView.js"></script>
+
+    <script src="plugin_assets/modeling/javascripts/editor/views/dia.SpecificationView.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/models/dia.Specification.js"></script>
+
+    <script src="plugin_assets/modeling/javascripts/editor/models/dia.Element.js"></script>
+
+
+    <script src="plugin_assets/modeling/javascripts/editor/models/state/uml.State.js"></script>
+
+    <script src="plugin_assets/modeling/javascripts/editor/models/activity/uml.Action.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/activity/uml.ActionView.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/models/activity/uml.DecisionAndMerge.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/activity/uml.DecisionAndMergeView.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/models/activity/uml.ForkAndJoinBar.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/models/activity/uml.ObjectNode.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/activity/uml.ForkAndJoinBarView.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/activity/uml.OjbectNodeView.js"></script>
+
+    <script src="plugin_assets/modeling/javascripts/editor/models/sequence/uml.Lifeline.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/models/sequence/uml.CombinedFragment.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/models/sequence/uml.InteractionUse.js"></script>
+
+    <script src="plugin_assets/modeling/javascripts/editor/models/usecase/uml.Actor.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/models/usecase/uml.UseCase.js"></script>
+
+    <script src="plugin_assets/modeling/javascripts/editor/models/directedgraph/general.Node.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/directedgraph/general.NodeView.js"></script>
+
+
+    <script src="plugin_assets/modeling/javascripts/editor/views/usecase/uml.UseCaseView.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/usecase/uml.ActorView.js"></script>
+
+
+    <script src="plugin_assets/modeling/javascripts/editor/views/sequence/uml.LifelineView.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/sequence/uml.MessageView.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/sequence/uml.CombinedFragmentView.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/sequence/uml.InteractionUseView.js"></script>
+
+    <script src="plugin_assets/modeling/javascripts/editor/models/class/uml.Class.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/dia.Paper.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/views/dia.Editor.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/models/uml.Relationship.js"></script>
+
+    <script src="plugin_assets/modeling/javascripts/editor/templates/lib/shapes.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/templates/lib/icons.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/templates/lib/effects.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/templates/lib/tools.js"></script>
+    <script src="plugin_assets/modeling/javascripts/editor/templates/templates.js"></script>
+
+    <link rel="stylesheet" href="plugin_assets/modeling/stylesheets/joint.css"/>
+    <link rel="stylesheet" href="plugin_assets/modeling/stylesheets/styles.css"/>
+    <link rel="stylesheet" href="plugin_assets/modeling/stylesheets/font-awesome.min.css"/>
+
+    <script src="plugin_assets/modeling/javascripts/examples/class_diagram.js"></script>
+    <script src="plugin_assets/modeling/javascripts/examples/statemachine_diagram.js"></script>
+    <script src="plugin_assets/modeling/javascripts/examples/usecase_diagram.js"></script>
+    <script src="plugin_assets/modeling/javascripts/examples/sequence_diagram.js"></script>
+    <script src="plugin_assets/modeling/javascripts/examples/activity_diagram.js"></script>
+<% end %>
+
+<div id="all"></div>
+
+<script>
+    $(function(){
+
+        dia.start();
+
+        var specs = <%= @specifications.to_json.html_safe -%>;
+        dia.project_id = <%= @project.id.to_s -%>;
+
+        specs.push({
+            id: 'specification_example',
+            type: 'ObjectOriented',
+            name: 'Project example'
+        })
+
+        var Specifications = Backbone.Collection.extend({
+            model: dia.Specification
+        })
+
+        var specifications = new Specifications()
+        specifications.reset(specs)
+
+        var editor = new dia.Editor({
+            el: "#all",
+            specifications: specifications
+        });
+
+        // Initiate the router
+        dia.app = new AppRoutes({
+            editor: editor
+        });
+
+        // Start Backbone history a necessary step for bookmarkable URL's
+        Backbone.history.start();
+    })
+</script>

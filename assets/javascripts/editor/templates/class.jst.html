@@ -1,0 +1,18 @@
+<div class="jst-template" name="Class">
+    <div class="item" name="markup">
+        <g class="scalable">
+            <rect class="uml-class-name-rect"/><rect class="uml-class-attributes-rect"></rect><rect class="uml-class-methods-rect"/>
+        </g>
+        <text class="uml-class-stereotype-text"/><text class="uml-class-name-text"/><text class="uml-class-attributes-text"/><text class="uml-class-methods-text"/>
+    </div>
+
+    <div class="item" name="tools">
+        <g class="uml-class-tools element-tools" transform="translate(<%= box.x %>, <%= box.y %>)">
+            <%= rect_border %>
+            <%= remove_icon %>
+            <% _.each(add_icons, function(icon){ %>
+                <%= icon %>
+            <% }); %>
+        </g>
+    </div>
+</div>

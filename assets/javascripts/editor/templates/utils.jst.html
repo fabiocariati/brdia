@@ -1,0 +1,43 @@
+<div class="jst-template" name="Utils">
+    <div class="item" name="basic_tools">
+        <a class="btn btn-default btn-sm dialog-link" href="#<%= editUrl %>"><%= dia.getIcon("fa-wrench") %></a>
+        <a style="margin-left: 2px;" class="btn btn-danger btn-sm"><%= dia.getIcon("fa-trash-o fa-inverse") %></a>
+    </div>
+</div>
+
+<div class="jst-template" name="Link">
+    <div class="item" name="markup">
+        <path class="connection" stroke="black"/>
+        <path class="marker-source" fill="black" stroke="black" />
+        <path class="marker-target" fill="black" stroke="black" />
+        <path class="connection-wrap"/>
+        <g class="labels" />
+        <g class="link-tools" />
+    </div>
+</div>
+
+<div class="jst-template" name="BaseClass">
+    <div class="item" name="edit">
+        <div class="custom-modal-dialog">
+            <p>Select Base Class</p>
+            <div style="overflow: auto; width:365px; height:200px;">
+                <% _.each(classes, function(c){ %>
+                    <a class="class-item" id="<%= c.id %>"><%= c.get("name") %></a><br>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="jst-template" name="BaseMethod">
+    <div class="item" name="edit">
+        <div class="custom-modal-dialog">
+            <p>Select Base Method</p>
+            <div style="overflow: auto; width:365px; height:200px;">
+                <% _.each(methods, function(m){ %>
+                    <a class="method-item" id="<%= m.id %>"><%= m.name %></a><br>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+<div class="jst-template" name="Action">
+    <div class="item" name="markup">
+        <rect class="main-reference" rx="10" style="fill:white;stroke:black;stroke-width:1" />
+        <text class="uml-action-name" />
+    </div>
+</div>
+
+<div class="jst-template" name="SendSignalAction">
+    <div class="item" name="markup">
+        <g class="main-reference">
+            shapes.sendsignal
+        </g>
+        <text class="uml-action-name" />
+    </div>
+</div>
+
+<div class="jst-template" name="AcceptEventAction">
+    <div class="item" name="markup">
+        <g class="main-reference">
+            shapes.acceptevent
+        </g>
+        <text class="uml-action-name" />
+    </div>
+</div>
+
+<div class="jst-template" name="AcceptTimeEventAction">
+    <div class="item" name="markup">
+            <g class="main-reference">
+                shapes.accepttime
+            </g>
+            <text class="uml-action-name" />
+    </div>
+</div>
+
+<div class="jst-template" name="ObjectNode">
+    <div class="item" name="markup">
+        <rect width="80" height="30" style="fill:white;stroke:black;stroke-width:1" />
+        <text class="uml-objectnode-name" />
+    </div>
+</div>
+
+<div class="jst-template" name="DecisionAndMerge">
+    <div class="item" name="markup">
+        <g transform="rotate(45)">
+            <rect width="25" height="25" style="fill:white;stroke:black;stroke-width:1.5" />
+        </g>
+    </div>
+</div>
+
+<div class="jst-template" name="ForkAndJoinBar">
+    <div class="item" name="markup">
+        <g class="rotatable">
+            <rect width="50" height="7" style="fill:black;" />
+        </g>
+    </div>
+
+    <div class="item" name="tools">
+        <g class="uml-forkandjoinbar-tools element-tools" transform="translate(<%= box.x %>, <%= box.y %>)">
+            <%= rect_border %>
+            <%= remove_icon %>
+            <g class="orientation-icon" transform="translate(<%= box.width - 5 %>,-10)">
+                <%= orientation_icon %>
+            </g>
+        </g>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="jst-template" name="Toolbar">
+    <div class="item" name="toolbar">
+        <g class="uml-toolbar" id="<%= id %>" transform="translate(<%= x %>, <%= y %>)">
+            <rect width="<%= rect.width %>" height="28" style="fill:#EDF4F7;" x="<%= rect.x %>" y="<%= rect.y %>" rx="5" ry="5"  />
+            <% _.each(icons, function(icon){ %>
+                <%= icon %>
+            <% }); %>
+        </g>
+    </div>
+</div>

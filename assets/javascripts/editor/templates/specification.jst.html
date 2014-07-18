@@ -1,0 +1,117 @@
+<div class="jst-template" name="Specification">
+    <div class="item" name="sidebar">
+        <div id="sidebar_<%= id %>" class="sidebar">
+            <div class="treeview hover">
+                <ul>
+                    <li>
+                        <input type="checkbox" id="cb-1">
+                        <label for="cb-1">
+                            <span><%= name %></span>
+                        </label>
+                        <ul>
+                            <% _.each(graphs, function(graph){ %>
+                                <li>
+                                    <div class="row row-focus" graph="<%= graph.get("id") %>" style="display: none;">
+                                        <table  style="width:100%">
+                                            <tr style="display:table-row;">
+                                                <td>
+                                                    <div class="ellipsis-text" style="width:110px;">
+                                                        <a href="#graph/<%= id %>/<%= graph.get("id") %>"><%= graph.get("name") %></a>
+                                                    </div>
+                                                </td>
+                                                <td style="float: right"><%= dia.template("Utils", "basic_tools", { editUrl: "edit_diagram/" + graph.get("id")}) %></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="row row-simple ellipsis-text" graph="<%= graph.get("id") %>" style="width:180px;">
+                                        <a href="#graph/<%= id %>/<%= graph.get("id") %>"><%= graph.get("name") %></a>
+                                    </div>
+                                </li>
+                            <% }); %>
+                            <br />
+                            <li style="float: right;"><a class="dialog-link " href="#new_diagram"><b>New Diagram</b> <%= dia.getIcon("fa-plus") %></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="item" name="show">
+        <div class="custom-modal-dialog">
+            <a href="#" style="float: right;">X</a>
+            <h3 style="text-align: center;">Specifications</h3>
+            <table  style="width:100%">
+                <% _.each(specifications, function(specification){ %>
+                    <tr specification="<%= specification.get("id") %>" style="display:table-row;">
+                        <td>
+                            <div class="ellipsis-text" style="width:300px;border-bottom: 1px dashed #BFCFFF;">
+                                <a href="#edit/<%= specification.get("id") %>"><%= specification.get("name") %></a>
+                            </div>
+                        </td>
+                        <td style="float: right"><%= dia.template("Utils", "basic_tools", { editUrl: "edit_specification/" + specification.get("id")}) %></td>
+                    </tr>
+                <% }); %>
+            </table>
+        </div>
+    </div>
+
+    <div class="item" name="edit">
+        <div class="custom-modal-dialog" id="save_specification">
+            <a href="#" style="float: right;">X</a>
+            <h3 style="text-align: center;"><%= type %> Specification</h3>
+
+            <p>Type:
+                <select name="type" style="margin-left: 27px;">
+                    <option value="ObjectOriented">Object Oriented</option>
+                    <option value="General">General</option>
+                </select>
+            </p>
+
+            <p>Name: <input name="name" style="width: 300px; float: right;" value="<%= specification.name %>" /></p>
+            <p>Repository(SSH): <input name="repository" style="width: 260px; float: right;" value="<%= specification.repository %>" /></p>
+            <p>User Name: <input name="repository_user" style="width: 280px; float: right;" value="<%= specification.repository_user %>" /></p>
+
+            <div style="float: right">
+                <a href="#" id="save_specification_buttom" class="btn btn-primary">Save</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="item" name="edit_diagram">
+            <div class="custom-modal-dialog" id="save_diagram">
+            <a href="#" style="float: right;">X</a>
+            <h3 style="text-align: center;">New Diagram</h3>
+
+            <p>Type:
+                <select name="type" style="margin-left: 27px;">
+                    <% _.each(types, function(type) { %>
+                        <option value="<%= type %>"><%= type %></option>
+                    <% }); %>
+                </select>
+            </p>
+
+            <p>Name: <input name="name" style="width: 300px; float: right;" value="<%= graph.name %>" /></p>
+            <% if(true) { %>
+                <div style="border: 1px solid darkgray; padding: 2px;">
+                    <div style="text-align: center;">GIT (SSH)</div>
+                    <p style="margin-top: 3px;">Repository Type:
+                        <select name="repository_type">
+                            <% _.each(repository_types, function(type) { %>
+                            <option value="<%= type %>"><%= type %></option>graph.name
+                            <% }); %>
+                        </select>
+                        Path: <input name="repository_path" style="width: 135px; float: right;" value="<%= repository_path %>" />
+                    </p>
+                </div>
+            <% } %>
+
+            <div style="float: right">
+                <a href="#" id="save_diagram_buttom" class="btn btn-primary">Save</a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
