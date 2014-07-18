@@ -1,13 +1,13 @@
 # BR-DIA - Redmine Plugin
 
-Requeriments
+# Requeriments
 
-1. Redmine
+## 1. Redmine
 
-## How to install
+# How to install
 
-### 1. Copy the plugin to the plugins folder in Redmine
+## 1. Copy the plugin to the plugins folder in Redmine
 
-### 2. Install plugin gems: bundle install
+## 2. Install plugin gems: bundle install
 
-### 3. Plugin database: rake redmine:plugins:migrate
+## 3. Plugin database: rake redmine:plugins:migrate
